@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ShortenerForm from "../components/ShortenerForm.astro";
+import ConfettiButton from "../components/ConfettiButton.astro";
+---
+
+<Layout title="URL Shortener">
+  <section class="h-screen bg-[#50F2A7] flex items-center justify-center p-12">
+    <div
+      class="w-full h-full border-8 border-solid border-black flex flex-col items-center justify-center"
+    >
+      <h1 class="relative text-5xl font-bold mb-14">
+        Shorten your
+        <span
+          class="ml-2 absolute top-1/2 transform -translate-y-1/2 bg-[#F2E41D] hover:rotate-2 text-black px-4 py-2 border-2 border-black rotate-6 transition-transform"
+        >
+          URL's
+        </span>
+      </h1>
+
+      <!-- Shortener Form Component -->
+      <ShortenerForm />
+
+      <!-- Display the shortened URL here -->
+      <p class="mt-10 text-2xl font-bold">
+        <code id="shortenedUrl"></code>
+      </p>
+
+      <!-- Confetti Button Component -->
+      <ConfettiButton />
+
+      <span class="absolute bottom-0 mb-16">Made with love by <a href="https://github.com/YoussefAyachi95" class="hover:text-[#fa7a7a]">@YoussefAyachi95</a></span>
+    </div>
+  </section>
+</Layout>
